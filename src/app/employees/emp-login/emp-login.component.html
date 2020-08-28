@@ -1,0 +1,33 @@
+<div class="card w3-container text-center ">
+    <h5 style="margin-top: 20px;">Login</h5>
+
+
+    <form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+
+
+
+        <div class="card-body mx-4">
+            <input type="hidden" name="EmployeeID" #EmployeeID="ngModel" [(ngModel)]="service.formData.EmployeeID">
+
+            <div class="form-group">
+                <label>FULL NAME</label>
+                <input name="FullName" disabled #FullName="ngModel" [(ngModel)]="service.formData.FullName"
+                    class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>PASSWORD</label>
+                <input name="EMPCode" placeholder="Enter your Emp Code" #EMPCode="ngModel" [(ngModel)]="service.formData.EMPCode"
+                    class="form-control">
+            </div>
+
+            <button  class="btn btn-success" type="submit">Login</button>
+
+
+        </div>
+
+    </form>
+
+    <label style="color: red;" class="text-center">{{test}}</label>
+
+</div>

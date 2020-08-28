@@ -1,0 +1,25 @@
+
+.xbtn{
+    color: rgb(245, 245, 245);
+    background-color: rgb(75, 106, 231);
+   
+}
+
+.xbtn:hover{
+    font-size: larger;
+    background-color: rgb(0, 67, 190);
+}
+
+
+
+.ybtn{
+    color: rgb(245, 245, 245);
+    background-color: rgb(177, 21, 21);
+   
+}
+
+.ybtn:hover{
+    font-size: larger;
+    background-color: rgb(214, 41, 41);
+}
+

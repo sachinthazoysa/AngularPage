@@ -4,16 +4,15 @@
 .form-group>input{
     font-weight: lighter;
 }
-
 .form-group>label{
     font-weight: lighter;
 }
 
 button[type="submit"]{
-    background-color: #18998e;
+    background-color: #67dfd4;
     color: #fff;
-}
 
+}
 .jumbotron{
     background-color: #fff;
     padding-top: 32px;
@@ -35,7 +34,7 @@ div.validation-error{
     color: #dc3545;
 }
 
-.form-elegant .font-small {
+ .form-elegant .font-small {
     font-size: 0.8rem; }
     
     .form-elegant .z-depth-1a {
@@ -46,15 +45,15 @@ div.validation-error{
     .form-elegant .btn:hover {
     -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
     box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
-
+ 
 
 
 
     .button {
-        background-color: #3b6fff; /* Green */
+        background-color: #4CAF50; /* Green */
         border: none;
         color: white;
-        padding: 10px;
+        padding: 20px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -68,5 +67,13 @@ div.validation-error{
       .button3 {border-radius: 8px;}
       .button4 {border-radius: 12px;}
       .button5 {border-radius: 50%;}
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+      
+      .example-form {
+        min-width: 150px;
+        max-width: 500px;
+        width: 100%;
+      }
+      
+      .example-full-width {
+        width: 100%;
+      }

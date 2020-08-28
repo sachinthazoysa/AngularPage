@@ -1,0 +1,67 @@
+
+<div class=" text-center">
+  <button (click)="openRegForm()"   matTooltip="Add a new User to the system"
+  aria-label="Button that displays a tooltip when focused or hovered over" type="button" class="btn btn-primary" style="margin-right: auto; margin-left: auto;">
+    Add a new User</button>
+</div>
+<br>
+<hr>
+<h4 class="text-center">Select a user to login</h4>
+
+<br>
+
+<div class="row">
+  <div class="search-form-field ">
+    <input matInput type="search" name="search" [(ngModel)]="searchText" autocomplete="off" style="width: 350px;"
+      class="form-control" placeholder="  Search for the user here .. ">
+  </div>
+
+</div>
+
+<br>
+
+<div class="row" style="background-color: darkcyan; ">
+
+  <div class="col-md-4" *ngFor="let emp of service.list |  filter:searchText  ">
+
+    <br>
+
+    <div class="card" style="width: 18rem; height: 10rem;" id="element_to_export">
+
+      <div class="card-body">
+        <h5 class="text-center">{{emp.FullName}}</h5>
+      </div>
+
+      <ul class="list-group list-group-flush">
+
+        <div class="row" style="margin-top: 5px;">
+          <div class="col-md-6  text-center" style="text-align: center; ">
+            <h6>{{emp.Position}}</h6>
+          </div>
+          <div class="col-md-6 text-center">
+            <h6 style="color: rgb(25, 0, 247); font-weight: bold;">{{emp.Mobile}}</h6>
+          </div>
+        </div>
+
+      </ul>
+
+      <div class="card-body">
+        <table class="table">
+          <tr class="table-hover grab tbl1 text-center">
+            <button type="button"   matTooltip="Click to login"
+            aria-label="Button that displays a tooltip when focused or hovered over" class="btn btn-success" (click)="populateForm(emp)" >Login</button>
+
+            <button type="button"   matTooltip="Delete user from the system"
+            aria-label="Button that displays a tooltip when focused or hovered over" class="btn btn-danger" (click)="onDelete(emp.EmployeeID)">Delete</button></tr>
+        </table>
+      </div>
+
+    </div>
+
+    <br>
+
+  </div>
+
+  <hr>
+
+</div>

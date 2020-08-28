@@ -1,0 +1,111 @@
+<div class="card w3-container ">
+
+
+    <div class="card-body mx-4">
+
+        <form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+
+            <input type="hidden" name="EmployeeID" #EmployeeID="ngModel" [(ngModel)]="service.formData.EmployeeID">
+
+
+            <div class="row">
+                <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Full Name</mat-label>
+                    <input name="FullName" #FullName="ngModel" [(ngModel)]="service.formData.FullName"
+                        class="example-full-width" matInput placeholder="Enter the Full Name" required>
+                    <mat-error *ngIf="FullName.touched">This field is required</mat-error>
+                </mat-form-field>
+                </div>
+
+                <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Position</mat-label>
+                    <input name="POSITION" #POSITION="ngModel" [(ngModel)]="service.formData.POSITION"
+                        class="example-full-width" style="margin-left: 10px;" matInput placeholder="Enter the Position" required>
+                    <mat-error *ngIf="POSITION.touched">This field is required</mat-error>
+                </mat-form-field>
+                </div>
+            
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>EMP Code</mat-label>
+                    <input name="EMPCode" #EMPCode="ngModel" [(ngModel)]="service.formData.EMPCode"
+                        class="example-full-width" matInput  placeholder="Ex:IT18230666" pattern="^[A-Z || a-z]{2}[0-9]{8}" maxlength="10"
+                        minlength="10" required>
+                    <mat-error *ngIf="EMPCode.touched">This field is required</mat-error>
+                    <mat-error *ngIf="EMPCode.invalid && EMPCode.dirty">Incorrect Emp code.</mat-error>
+
+                </mat-form-field>
+                </div>
+
+                <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Mobile</mat-label>
+                    <input name="Mobile" #Mobile="ngModel" [(ngModel)]="service.formData.Mobile"
+                        class="example-full-width" style="margin-left: 10px;" matInput pattern="^[0]{1}[0-9]{9}" placeholder="Ex:0775488985" maxlength="10"
+                        minlength="10" required>
+                    <mat-error *ngIf="Mobile.touched">This field is required</mat-error>
+                    <mat-error *ngIf="Mobile.invalid && Mobile.dirty">Incorrect phone number.</mat-error>
+
+                </mat-form-field>
+                </div>
+            
+            </div>
+
+            
+
+            <!-- <div class="form-group">
+                <label>FULL NAME</label>
+                <input name="FullName" #FullName="ngModel" [(ngModel)]="service.formData.FullName" class="form-control"
+                    required>
+                <div class="validation-error" *ngIf="FullName.invalid && FullName.touched">This field is required</div>
+            </div> -->
+
+
+
+            <!-- <div class="form-group">
+                <label>POSITION</label>
+                <input name="Position" #Position="ngModel" [(ngModel)]="service.formData.Position" class="form-control"
+                    required>
+                <div class="validation-error" *ngIf="Position.invalid && Position.touched">This field is required</div>
+            </div> -->
+
+            <!-- <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    <label>EMP CODE</label>
+                    <input name="EMPCode" placeholder="Ex:IT18230666" pattern="^[A-Z || a-z]{2}[0-9]{8}" maxlength="10"
+                        minlength="10" #EMPCode="ngModel" [(ngModel)]="service.formData.EMPCode" class="form-control"
+                        required>
+                    <mat-error *ngIf="EMPCode.invalid && EMPCode.dirty">Incorrect Emp code.</mat-error>
+                    <mat-error *ngIf="EMPCode.invalid && EMPCode.touched">This field is required</mat-error>
+                </div>
+
+
+                <div class="form-group col-md-6">
+                    <label>MOBILE</label>
+                    <input name="Mobile" pattern="^[0]{1}[0-9]{9}" placeholder="Ex:0775488985" maxlength="10"
+                        minlength="10" #Mobile="ngModel" [(ngModel)]="service.formData.Mobile" class="form-control">
+                    <mat-error *ngIf="Mobile.invalid && Mobile.dirty ">Incorrect phone number.</mat-error>
+                </div>
+            </div>
+ -->
+
+
+            <hr>
+
+            <div class="form-group">
+                <button type="submit" [disabled]="form.invalid"
+                    class="background-color:red  btn btn-lg btn-block">SUBMIT</button>
+                <button type="button" class="btn btn-success btn-block" (click)="cancel()">Cancel</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
